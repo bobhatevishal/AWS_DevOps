@@ -13,3 +13,9 @@ Today I explored how to launch an EC2 instance, configure security groups, open 
 
 ## Commands Used
 ssh -i .\Download\key\server.pem ec2-user@<public-ip>
+
+# References
+
+- [AWS EC2 Official Docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
+- [YouTube: Launch EC2 Instance Step-by-Step](https://youtu.be/2zeoNC4cdTA?si=M2n9h7PmZMsXZ_7t)
+
