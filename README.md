@@ -1,4 +1,4 @@
-# Learning-day1
+# 365 AWS DevOps
 # AWS EC2 Basics - Day 1
 
 Today I explored how to launch an EC2 instance, configure security groups, open ports, and access the server using SSH.
