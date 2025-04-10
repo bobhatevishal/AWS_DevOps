@@ -1,0 +1,19 @@
+## Day 2 - SCP and Basic Linux Commands
+
+*Date:* April 6, 2025
+
+### What I Learned:
+- How to use scp (Secure Copy Protocol) to upload and download files between local machine and a remote AWS server.
+- Basic Linux commands:
+  - cd – Change directory
+  - mkdir – Make a new directory
+  - touch – Create a new file
+  - mv   - move file
+  - cp - copy file
+### SCP Commands Used:
+
+# Uploading a file to remote server
+scp -i  Download/key.pem Desktop\file.txt ec2-user@-ec2-ip:.
+
+# Downloading a file from remote server
+scp -i Download/key.pem ec2-user@-ec2-ip:file.txt Desktop\
