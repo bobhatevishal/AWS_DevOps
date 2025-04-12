@@ -1,0 +1,24 @@
+I focused on essential **Linux commands** that help manage files, directories, and user access — a critical foundation for working in cloud environments.
+
+
+## 🧠 Topics Covered
+
+- 🔐 **`chmod`** – Used to change file and directory permissions  
+- 🛡️ **`chown`** – Used to change the ownership of files and directories  
+- 👤 **`adduser`** – Command to add a new user to the system  
+
+---
+
+## 🧪 Sample Commands
+
+# Give read, write, execute permissions to owner, and read/execute to group and others
+chmod 755 user
+![2025-04-07_18-45](https://github.com/user-attachments/assets/fb03259a-e39a-4909-8ffa-5fe04f971e91)
+
+# Change ownership of a file to a specific user and group
+chown root:ec2-user user
+![2025-04-07_18-50](https://github.com/user-attachments/assets/15860d56-3c0e-4906-8937-984029d29761)
+
+# Add a new user
+adduser vishal
+![2025-04-07_19-13](https://github.com/user-attachments/assets/8742744c-97a8-4fcc-b714-562358e5811b)
