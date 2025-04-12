@@ -1,0 +1,47 @@
+# 🚀 Day 4 of My AWS & DevOps Learning Journey
+
+Today, I learned how to work with the **configuration files of popular web servers** like **Apache** and **Nginx** on both **AWS Linux** and **Ubuntu**.
+
+---
+
+## 🔧 What I Learned
+
+### ✅ Apache Configuration
+
+- **File location**:
+  - AWS Linux: `/etc/httpd/conf/httpd.conf`
+![LINUX HTTPD](https://github.com/user-attachments/assets/ac1e86ca-1bf4-4076-9524-c2c8e50bc532)
+
+  - Ubuntu: `/etc/apache2/sites-enable/000.default
+![nginx linux](https://github.com/user-attachments/assets/cc9fa6ab-c18a-4a0c-82f6-ee64abb6d5e8)
+
+- I learned how to:
+  - Change the **default port** (e.g., from `80` to `8080`)
+  - Change the **default index file path** (e.g., from `/var/www/html/index.html` to a custom directory)
+![linux cammand](https://github.com/user-attachments/assets/ddb0e7b9-5438-4df7-a97e-19f1f43ed47c)
+
+---
+## 📂 HTML Path Overview
+
+| Web Server | Default HTML File Path          | OS           |
+|------------|---------------------------------|--------------|
+|Apache/nginx| `/var/www/html`                 | Ubuntu/Linux |
+| Nginx      | `/usr/share/nginx/html`         |    Linux     |
+
+
+### ✅ Nginx Configuration
+
+- **File location**: `/etc/nginx/nginx.conf
+- Ubuntu: `/etc/nginx/sites-enable/default
+
+- I learned how to:
+  - Update the **`listen` port** (change the default port number)
+  - Modify the **`root` path** to serve a different index file
+
+---
+
+## 💡 Key Takeaway
+
+By editing the server configuration files and restarting the services, I was able to **serve custom web content** on different ports and from different paths. This is an important step for hosting websites or apps on cloud servers.
+
+---
