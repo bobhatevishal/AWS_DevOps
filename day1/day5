@@ -1,0 +1,54 @@
+# 📘 Day 3: AWS & DevOps Learning Journey
+
+Today, I explored **MariaDB**, an open-source relational database system. I learned how to install it, configure it, and perform basic database operations using SQL.
+
+---
+
+## 🔧 What I Learned
+
+### ✅ 1. Installing MariaDB
+
+To install MariaDB on Linux:
+
+```bash
+sudo yum install mariadb-server -y     # For AWS Linux
+sudo apt install mariadb-server -y     # For Ubuntu
+
+To start the service:
+sudo systemctl start mariadb
+
+Enable it on boot:
+sudo systemctl enable mariadb
+
+🔐 2. Setting the Root Password
+sudo mysql_secure_installation
+
+🛠️ 3. Database Operations
+➕ Create a Database
+CREATE DATABASE my_database;
+USE my_database;
+
+📋 Create a Table
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+🧱 Data Types I Learned
+INT – for numeric IDs
+
+VARCHAR – for text strings (like name, email)
+
+TIME / DATE / TIMESTAMP – for storing time-based data
+
+TEXT / STRING – for long-form text (use TEXT in MariaDB)
+
+🧩 Inserting Data
+
+INSERT INTO users (name, email) 
+VALUES ('John Doe', 'john@example.com');
+
+
+Today, I built a strong foundation in using MariaDB, including installation, setup, and key SQL commands to manage data.
