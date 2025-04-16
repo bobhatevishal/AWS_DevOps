@@ -1,0 +1,38 @@
+
+---
+
+## 🔐 NAT Gateway (NGW)
+
+A **NAT (Network Address Translation) Gateway** enables **outbound internet access** for instances in a **private subnet**, without allowing **inbound** traffic from the internet.
+
+### 🔹 Key Points:
+- Deployed in a **public subnet**
+- Automatically scales
+- **One-way** access: Private → Internet ✅, Internet → Private ❌
+- Can be **managed (NAT Gateway)** or **self-hosted (NAT Instance)**
+
+### ✅ Use Case:
+- Allow private EC2s (e.g., database servers, app backends) to:
+  - Download packages
+  - Access external APIs
+
+### 🧭 Route Table Example:
+
+---
+
+## 🔁 Summary Table:
+
+| Feature              | Internet Gateway         | NAT Gateway                      |
+|----------------------|--------------------------|----------------------------------|
+| **Attached To**      | VPC                      | Public Subnet                    |
+| **Used By**          | Public Subnets           | Private Subnets                  |
+| **Inbound Traffic**  | ✅ (Allowed)              | ❌ (Blocked)                     |
+| **Outbound Traffic** | ✅ (Allowed)              | ✅ (Allowed)                     |
+| **Purpose**          | Full internet access     | Outbound-only internet access    |
+
+---
+
+## 💡 Pro Tip:
+Always place the NAT Gateway in a **public subnet**, and ensure your private subnets route `0.0.0.0/0` to the NAT Gateway's **ENI** via the main route table (or a custom one).
+
+---
