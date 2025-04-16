@@ -1,0 +1,26 @@
+# 📐 CIDR & Subnetting in AWS
+
+## CIDR (Classless Inter-Domain Routing)
+
+CIDR notation defines IP ranges using the format: `IP/Prefix`
+Example: `10.0.0.0/16`
+
+- `/16` = 65,536 IPs
+- `/24` = 256 IPs
+- `/28` = 16 IPs (13 usable)
+
+## Subnetting
+
+Subnetting splits a VPC CIDR into smaller blocks.
+
+Example:
+- VPC: `10.0.0.0/16`
+- Subnet A: `10.0.1.0/24` (Public)
+- Subnet B: `10.0.2.0/24` (Private)
+
+## Practice
+
+| CIDR         | Total IPs | Usable IPs | 
+|--------------|-----------|------------|
+| 10.0.0.0/24  | 256       | 251        |
+| 10.0.0.0/28  | 16        | 11         |
