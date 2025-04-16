@@ -26,8 +26,8 @@ A **NAT (Network Address Translation) Gateway** enables **outbound internet acce
 |----------------------|--------------------------|----------------------------------|
 | **Attached To**      | VPC                      | Public Subnet                    |
 | **Used By**          | Public Subnets           | Private Subnets                  |
-| **Inbound Traffic**  | ✅ (Allowed)              | ❌ (Blocked)                     |
-| **Outbound Traffic** | ✅ (Allowed)              | ✅ (Allowed)                     |
+| **Inbound Traffic**  | ✅ (Allowed)            | ❌ (Blocked)                     |
+| **Outbound Traffic** | ✅ (Allowed)            | ✅ (Allowed)                     |
 | **Purpose**          | Full internet access     | Outbound-only internet access    |
 
 ---
