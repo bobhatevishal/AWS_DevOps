@@ -1,0 +1,96 @@
+
+## EC2 Private Server Access using Public Jump Server in Custom VPC
+
+### 🧱 Architecture Overview
+
+This project demonstrates how to securely access a **private EC2 instance** (like a DB server) that’s not directly exposed to the internet, by routing through a **jump server** (bastion host) located in a **public subnet**.
+
+---
+
+### 🛠️ Components Used
+
+- **Custom VPC** (`facebookClintVPC`)
+- **Public Subnet** (`facebookWEBsubnet`)
+- **Private Subnet** (`facebookDBsubnet`)
+- **Internet Gateway** (attached to the VPC)
+- **EC2 Instances**:
+  - `facebookwebserver` (Public server)
+  - `facebookDBserver` (Private server)
+- **Key Pair** for SSH access (`mumbaiAmazonLinux.pem`)
+- **Security Groups** for access control
+
+---
+
+### 🔐 Networking Configuration
+
+#### 🌍 Public Subnet
+
+- **Contains:** `facebookwebserver`
+- **Has:** Public IP (e.g., `3.110.187.173`)
+- **Access:** Open to the internet via Internet Gateway
+- **Purpose:** Acts as the **jump server** to access private subnet
+
+#### 🔒 Private Subnet
+
+- **Contains:** `facebookDBserver`
+- **Has:** Only a Private IP (e.g., `172.16.42.6`)
+- **No direct internet access**
+- **Access:** Only via the public EC2 instance (jump server)
+- **Purpose:** Typically holds sensitive resources like databases
+
+---
+
+### 🌐 Flow of Access
+
+1. **SSH into Public EC2 (Jump Server):**
+   ```bash
+   ssh -i mumbaiAmazonLinux.pem ec2-user@3.110.187.173
+   ```
+
+2. **From Jump Server, SSH into Private EC2 (DB Server):**
+   ```bash
+   ssh -i mumbaiAmazonLinux.pem ec2-user@172.16.42.6
+   ```
+
+✅ You now have access to the private server through the public instance!
+
+
+
+---
+
+### 🔐 Security Best Practices Followed
+
+- No public IP assigned to the private server
+- Strict Security Group rules:
+  - Only SSH (port 22) access allowed from known IPs
+  - The DB server only allows traffic from the jump server (public EC2)
+
+---
+
+### 📚 What You Learn from This Setup
+
+- How to design and launch EC2 instances in custom **public/private subnets**
+- Configure **routing tables and Internet Gateway**
+- Use a **jump server (bastion host)** to securely reach private instances
+- Understand **network segmentation** and **secure access patterns** in AWS
+
+---
+
+### 📁 Screenshots & Evidence
+
+1. ✅ EC2 instance details (public & private)
+2. ✅ SSH session logs showing connection chain
+3. ✅ Terminal views for verification
+
+---
+
+### 💡 Use Case Examples
+
+- Hosting a secure database behind a web app
+- Limiting external access to internal systems
+- Simulating enterprise-grade security practices on AWS
+
+---
+    
+
+    
