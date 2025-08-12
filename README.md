@@ -1,8 +1,3 @@
-Theek hai bhai 👍
-Main tere liye **100 AWS + DevOps Interview Q\&A** bana ke dunga jo detail me hoga, short impactful answers ke saath, aur topic-wise structured hoga.
-
-Main ise 5 parts me dunga:
-
 1. **Part 1 – Linux & Git (20 Q/A)**
 2. **Part 2 – CI/CD & Jenkins (20 Q/A)**
 3. **Part 3 – Docker & Kubernetes (20 Q/A)**
