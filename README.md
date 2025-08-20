@@ -273,6 +273,13 @@ pipeline {
 
 * **Declarative:** Simpler, structured syntax (`pipeline { }`).
 * **Scripted:** More flexible, written in Groovy script.
+| Aspect             | Declarative Pipeline                                                                  | Scripted Pipeline                                                |
+| ------------------ | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| **Syntax Style**   | Follows a predefined, structured, and opinionated syntax (uses `pipeline { }` block). | Written in pure Groovy, very flexible but less structured.       |
+| **Ease of Use**    | Easier for beginners, human-readable, enforces best practices.                        | More complex, requires good Groovy scripting knowledge.          |
+| **Error Handling** | Limited flexibility in error handling (uses `post` blocks).                           | Advanced error handling with `try`, `catch`, `finally`.          |
+| **Flexibility**    | Less flexible (restricted by declarative rules).                                      | Highly flexible (you can write custom logic, loops, conditions). |
+
 
 ---
 
