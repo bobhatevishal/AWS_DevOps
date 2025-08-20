@@ -271,8 +271,6 @@ pipeline {
 **Q30. Difference between Declarative and Scripted Pipelines?**
 **A:**
 
-* **Declarative:** Simpler, structured syntax (`pipeline { }`).
-* **Scripted:** More flexible, written in Groovy script.
 | Aspect             | Declarative Pipeline                                          | Scripted Pipeline                                                |
 | ------------------ | ------------------------------------------------------------- | ---------------------------------------------------------------- |
 | **Syntax Style**   | Follows a predefined, structured, and opinionated syntax      | Written in pure Groovy, very flexible but less structured.       |
